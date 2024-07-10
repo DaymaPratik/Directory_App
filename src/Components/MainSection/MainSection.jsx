@@ -18,8 +18,8 @@ function MainSection() {
   const [user, setUser] = useState({
     userName: "",
     DOB: "",
-    adhaarNumber: "",
-    MobileNumber: "",
+    adhaarNumber: " ",
+    MobileNumber: " ",
     age: "",
   });
 
