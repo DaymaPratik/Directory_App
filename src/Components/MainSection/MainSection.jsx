@@ -18,8 +18,8 @@ function MainSection() {
   const [user, setUser] = useState({
     userName: "",
     DOB: "",
-    adhaarNumber: " ",
-    MobileNumber: " ",
+    adhaarNumber: "",
+    MobileNumber: "",
     age: "",
   });
 
@@ -57,11 +57,11 @@ function MainSection() {
     const adNo=user.adhaarNumber;
     const mbNo=user.MobileNumber;
     // console.log(adNo.length);
-    if(adNo?.length != 12 || isNaN(adNo)){
+    if(adNo.length != 12 || isNaN(adNo)){
       alert("Adhaar Number  must be 12 digits");
       setIsNotValid(true);
       return;
-    }else if(mbNo?.length != 10 || isNaN(mbNo)){
+    }else if(mbNo.length != 10 || isNaN(mbNo)){
       alert("Mobile Number  must be 10 digits");
       setIsNotValid(true);
       return;
@@ -74,7 +74,7 @@ function MainSection() {
   };
   //DELETE THE USER BASE ON ENTERED ADHAAR NUMBER
   const deleteUserFunction = (adhaarNo) => {
-    const filterArr = userArr.filter((item) => {
+    const filterArr = userArr?.filter((item) => {
       return item.adhaarNumber != adhaarNo;
     });
     setUserArr(filterArr);
@@ -88,10 +88,10 @@ function MainSection() {
   
   //HANDLE AND GET THE USE USER WITH ENTERED ADHAAR NUMBER IN AN INPUT FEILD
   const handleSearchFunction = (searchIp) => {
-    const filterArr = userArr.filter((item) => {
+    const filterArr = userArr?.filter((item) => {
       return item.adhaarNumber == searchIp;
     });
-    if (filterArr.length===0) {
+    if (filterArr?.length===0) {
       setIsSearchArr(false);
       return;
     }
@@ -123,7 +123,7 @@ function MainSection() {
 
 
               {/*Row use To display the added user list */}
-              {userArr.length > 0 &&
+              {userArr?.length > 0 &&
                 userArr?.map((item, idx) => {
                   return (
                    <UserDisplayRow key={idx} idx={idx}  item={item} deleteUserFunction={deleteUserFunction}/>
