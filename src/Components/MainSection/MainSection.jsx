@@ -57,11 +57,11 @@ function MainSection() {
     const adNo=user.adhaarNumber;
     const mbNo=user.MobileNumber;
     // console.log(adNo.length);
-    if(adNo.length != 12 || isNaN(adNo)){
+    if(adNo?.length != 12 || isNaN(adNo)){
       alert("Adhaar Number  must be 12 digits");
       setIsNotValid(true);
       return;
-    }else if(mbNo.length != 10 || isNaN(mbNo)){
+    }else if(mbNo?.length != 10 || isNaN(mbNo)){
       alert("Mobile Number  must be 10 digits");
       setIsNotValid(true);
       return;
@@ -119,7 +119,7 @@ function MainSection() {
         <div className="main-table-box overflow-auto h-[50vh]">
           <table className=" w-[100%] ">
             <TableHead/>
-            <tbody className="text-center text-[12px] min-[950px]:text-[17px] min-[1100px]:text-[20px] w-[100%] ">
+            <tbody className="text-center text-[12px] min-[950px]:text-[17px] min-[1100px]:text-[25px] w-[100%] ">
 
 
               {/*Row use To display the added user list */}
