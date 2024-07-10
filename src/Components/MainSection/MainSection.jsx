@@ -12,7 +12,7 @@ function MainSection() {
   const [canAddUser, setCanAddUser] = useState(false);
   const [addUserDispaly, setAddUserDispaly] = useState(true);
   const [searchInput, setSearchInput] = useState("");
-  const [searchedArr, setSearchedArr] = useState(null);
+  const [searchedArr, setSearchedArr] = useState([]);
   const [isSearchArr, setIsSearchArr] = useState(false);
   const [isNotValid,setIsNotValid]=useState(false);
   const [user, setUser] = useState({
@@ -124,7 +124,7 @@ function MainSection() {
 
               {/*Row use To display the added user list */}
               {userArr &&
-                userArr.map((item, idx) => {
+                userArr?.map((item, idx) => {
                   return (
                    <UserDisplayRow key={idx} idx={idx}  item={item} deleteUserFunction={deleteUserFunction}/>
                   );

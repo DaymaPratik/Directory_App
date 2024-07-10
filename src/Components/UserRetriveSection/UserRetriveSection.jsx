@@ -28,7 +28,7 @@ function UserRetriveSection({handleSearchFunction,searchInput,setSearchInput,isS
     </div>
 
     {isSearchArr ? (
-      searchedArr.map((item, idx) => {
+      searchedArr?.map((item, idx) => {
         return (
          <SearchArrayCard item={item} key={idx}/>
         );
