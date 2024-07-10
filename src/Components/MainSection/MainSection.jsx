@@ -123,7 +123,7 @@ function MainSection() {
 
 
               {/*Row use To display the added user list */}
-              {userArr &&
+              {userArr.length > 0 &&
                 userArr?.map((item, idx) => {
                   return (
                    <UserDisplayRow key={idx} idx={idx}  item={item} deleteUserFunction={deleteUserFunction}/>
