@@ -57,11 +57,11 @@ function MainSection() {
     const adNo=user.adhaarNumber;
     const mbNo=user.MobileNumber;
     // console.log(adNo.length);
-    if(adNo.length != 12 || isNaN(adNo)){
+    if(adNo?.length != 12 || isNaN(adNo)){
       alert("Adhaar Number  must be 12 digits");
       setIsNotValid(true);
       return;
-    }else if(mbNo.length != 10 || isNaN(mbNo)){
+    }else if(mbNo?.length != 10 || isNaN(mbNo)){
       alert("Mobile Number  must be 10 digits");
       setIsNotValid(true);
       return;
