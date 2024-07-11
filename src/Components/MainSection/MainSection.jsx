@@ -230,14 +230,14 @@ function MainSection() {
   }, [userArr]);
 
   const handleChangeFunction = (e) => {
-    // const { value, name } = e.target;
-    // let newUser = { ...user, [name]: value };
-    // if (name === "DOB") {
-    //   const age = calculateAge(value);
-    //   newUser.age = age;
-    // }
-    // setUser(newUser);
-    console.log("hello");
+    const { value, name } = e.target;
+    let newUser = { ...user, [name]: value };
+    if (name === "DOB") {
+      const age = calculateAge(value);
+      newUser.age = age;
+    }
+    setUser(newUser);
+    // console.log("hello");
   };
 
   const calculateAge = (dob) => {
@@ -251,16 +251,16 @@ function MainSection() {
     setCanAddUser(true);
   };
 
-  const saveUserFunction = (e) => {
-    e.preventDefault();
+  const saveUserFunction = () => {
+    // e.preventDefault();
     const adNo = user.adhaarNumber;
     const mbNo = user.MobileNumber;
-
+    console.log(adNo,mbNo);
     if (adNo?.length !== 12 || isNaN(adNo)) {
       alert("Adhaar Number must be 12 digits");
       setIsNotValid(true);
       return;
-    } else if (mbNo?.length !== 10 || isNaN(mbNo)) {
+    }  if (mbNo?.length !== 10 || isNaN(mbNo)) {
       alert("Mobile Number must be 10 digits");
       setIsNotValid(true);
       return;
