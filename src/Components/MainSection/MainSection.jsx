@@ -32,11 +32,13 @@ function MainSection() {
   const handleChangeFunction = (e) => {
     const { value, name } = e.target;
     let newUser = { ...user, [name]: value };
+    console.log(newUser);
     if (name === "DOB") {
       const age = calculateAge(value);
       newUser.age = age;
     }
  setUser(newUser)
+ console.log(user);
   };
   
   
@@ -54,6 +56,7 @@ function MainSection() {
   //IT SAVES THE USER DETAILS THAT IS ENTERED BY USER IN AN INPUT FORM,PUSHES USER OBJ TO USER ARR
   const saveUserFunction = (e) => {
     e.preventDefault();
+    console.log(e);
     const adNo=user.adhaarNumber;
     const mbNo=user.MobileNumber;
     // console.log(adNo.length);

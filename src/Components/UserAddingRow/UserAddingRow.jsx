@@ -20,7 +20,7 @@ function UserAddingRow({user ,handleChangeFunction,saveUserFunction,isNotValid})
                       className="border-2 border-sky-500 px-1 w-[90%] py-1 min-[1100px]:px-2 min-[1100px]:py-2"
                       value={user.DOB}
                       name="DOB"
-                      onChange={handleChangeFunction}
+                      onChange={(e)=>handleChangeFunction(e)}
                       required
                     />
                   </td>
