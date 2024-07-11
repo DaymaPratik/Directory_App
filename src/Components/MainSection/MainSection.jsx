@@ -207,10 +207,7 @@ import UserDisplayRow from "../UserDispalyRow/UserDisplayRow";
 import HeaderButtons from "./HeaderButtons";
 
 function MainSection() {
-  const [userArr, setUserArr] = useState(() => {
-    const storedUserArr = localStorage.getItem("User_Array");
-    return storedUserArr ? JSON.parse(storedUserArr) : [];
-  });
+  const [userArr, setUserArr] = useState([]);
   const [canAddUser, setCanAddUser] = useState(false);
   const [addUserDispaly, setAddUserDispaly] = useState(true);
   const [searchInput, setSearchInput] = useState("");
