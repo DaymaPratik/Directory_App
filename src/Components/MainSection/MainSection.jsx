@@ -88,15 +88,15 @@ function MainSection() {
   
   //HANDLE AND GET THE USE USER WITH ENTERED ADHAAR NUMBER IN AN INPUT FEILD
   const handleSearchFunction = (searchIp) => {
-    const filterArr = userArr?.filter((item) => {
+    const filterArr = userArr.filter((item) => {
       return item.adhaarNumber == searchIp;
     });
-    if (filterArr?.length===0) {
+    if (filterArr.length===0) {
       setIsSearchArr(false);
       return;
     }
     setIsSearchArr(true);
-    console.log(filterArr);
+    // console.log(filterArr);
     setSearchedArr(filterArr);
     return;
   };
