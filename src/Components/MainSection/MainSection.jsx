@@ -230,13 +230,14 @@ function MainSection() {
   }, [userArr]);
 
   const handleChangeFunction = (e) => {
-    const { value, name } = e.target;
-    let newUser = { ...user, [name]: value };
-    if (name === "DOB") {
-      const age = calculateAge(value);
-      newUser.age = age;
-    }
-    setUser(newUser);
+    // const { value, name } = e.target;
+    // let newUser = { ...user, [name]: value };
+    // if (name === "DOB") {
+    //   const age = calculateAge(value);
+    //   newUser.age = age;
+    // }
+    // setUser(newUser);
+    console.log("hello");
   };
 
   const calculateAge = (dob) => {
