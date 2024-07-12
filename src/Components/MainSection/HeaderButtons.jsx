@@ -1,10 +1,10 @@
 function HeaderButtons({setAddUserDispaly}) {
     
   const handleUserTable = () => {
-    setAddUserDispaly((prevVal)=>!prevVal);
+    setAddUserDispaly(true);
   };
   const handleUserDRetrive = () => {
-    setAddUserDispaly((prevVal)=>!prevVal);
+    setAddUserDispaly(false);
   };
   return (
     <div className="btn-box flex justify-center gap-[20px] min-[950px]:gap-[35px] min-[1100px]:gap-[50px] items-center py-[15px]">

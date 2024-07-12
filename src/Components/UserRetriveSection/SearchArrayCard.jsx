@@ -1,10 +1,9 @@
 
 function SearchArrayCard({item}) {
   return (
-    <div
-            className="border-2 border-black w-fit p-4 my-4 mx-auto"
+    <div className=" w-fit py-2 px-4 my-4 bg-[#b1b8da73] mx-auto shadow-[0px_0px_10px_0px_black]"
           >
-            <p className="text-[25px] font-bold text-center py-2 bg-blue-400 text-white w-[100%]">User Details</p>
+            <p className="text-[25px] font-bold text-center py-2 my-2 bg-blue-400 text-white w-[100%]">User Details</p>
             <p className="text-[25px]">
               <span className="font-semibold">Name: </span>
               {item.userName}

@@ -6,7 +6,7 @@ function UserAddingRow({user ,handleChangeFunction,saveUserFunction,isNotValid})
                     <input
                       type="text"
                       placeholder="Name"
-                      className="border-2 border-sky-500 w-[90%] px-1 py-1 min-[1100px]:px-2 min-[1100px]:py-2"
+                      className="border-2 border-sky-500 w-[90%] px-1 py-2 min-[1100px]:px-2 min-[1100px]:py-2"
                       value={user.userName}
                       name="userName"
                       onChange={handleChangeFunction}
@@ -17,7 +17,7 @@ function UserAddingRow({user ,handleChangeFunction,saveUserFunction,isNotValid})
                   <td className="py-2">
                     <input
                       type="date"
-                      className="border-2 border-sky-500 px-1 w-[90%] py-1 min-[1100px]:px-2 min-[1100px]:py-2"
+                      className="border-2 border-sky-500 px-1 w-[90%] py-2 min-[1100px]:px-2 min-[1100px]:py-2"
                       value={user.DOB}
                       name="DOB"
                       onChange={(e)=>handleChangeFunction(e)}
@@ -29,13 +29,13 @@ function UserAddingRow({user ,handleChangeFunction,saveUserFunction,isNotValid})
                     <input
                       type="number"
                       placeholder="Adhaar Number"
-                      className="border-2 border-sky-500 w-[90%] px-1 py-1 min-[1100px]:px-2 min-[1100px]:py-2"
+                      className="border-2 border-sky-500 w-[90%] px-1 py-2 min-[1100px]:px-2 min-[1100px]:py-2"
                       value={user.adhaarNumber}
                       name="adhaarNumber"
                       onChange={handleChangeFunction}
                       required
                     />
-                     {isNotValid && <p>Adhaar must 12 have Digits</p> }
+                     {isNotValid.adhaar && <p>Adhaar must 12 have Digits</p> }
 
                   </td>
 
@@ -43,13 +43,13 @@ function UserAddingRow({user ,handleChangeFunction,saveUserFunction,isNotValid})
                     <input
                       type="number"
                       placeholder="Moblie NUmber"
-                      className="border-2 border-sky-500  w-[90%] px-1 py-1 min-[1100px]:px-2 min-[1100px]:py-2"
+                      className="border-2 border-sky-500  w-[90%] px-1 py-2 min-[1100px]:px-2 min-[1100px]:py-2"
                       value={user.MobileNumber}
                       name="MobileNumber"
                       onChange={handleChangeFunction}
                       required
                     />
-                    {isNotValid && <p>Mobile must 10 have Digits</p> }
+                    {isNotValid.mobile && <p>Mobile must 10 have Digits</p> }
 
                   </td>
 
@@ -57,7 +57,7 @@ function UserAddingRow({user ,handleChangeFunction,saveUserFunction,isNotValid})
                     <input
                       type="text"
                       placeholder="Age"
-                      className="border-2 border-sky-500 w-[50%] px-1 py-1 min-[1100px]:px-2 min-[1100px]:py-2"
+                      className="border-2 border-sky-500 w-[50%] px-1 py-2 min-[1100px]:px-2 min-[1100px]:py-2"
                       value={user.age}
                       name="age"
                       onChange={handleChangeFunction}
