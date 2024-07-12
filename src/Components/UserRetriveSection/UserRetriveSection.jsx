@@ -45,7 +45,7 @@ function UserRetriveSection({handleSearchFunction,searchInput,setSearchInput,isS
                 );
               })
             ) : (
-              <h1 className="text-center text-[27px] font-semibold mx-auto  shadow-[0px_0px_10px_0px_black] w-fit px-10 bg-[#b1b8da73] py-3 my-[40px] items-center">
+              <h1 className="text-center rounded-xl text-[27px] font-semibold mx-auto  shadow-[0px_0px_10px_0px_black] w-fit px-10 bg-[#b1b8da73] py-3 my-[40px] items-center">
                 No User Found Enter Valid Adhaar Number....
               </h1>
             )
